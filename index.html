@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Irish De Guzman - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        .header {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            padding: 50px;
+            background-color: #f8f9fa;
+            border-bottom: 3px solid #2c3e50;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            color: #1a1a1a;
+        }
+
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .about {
+            font-size: 0.95em;
+            line-height: 1.7;
+            color: #666;
+            max-width: 500px;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .left-column {
+            padding: 40px 30px 40px 50px;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        .right-column {
+            padding: 40px 50px 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2c3e50;
+            color: #1a1a1a;
+        }
+
+        /* Work Experience */
+        .experience-item {
+            margin-bottom: 25px;
+        }
+
+        .experience-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1em;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+        }
+
+        .experience-date {
+            font-size: 0.85em;
+            color: #888;
+            margin-bottom: 3px;
+        }
+
+        .experience-location {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .experience-description {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .experience-description ul {
+            margin-left: 18px;
+            margin-top: 5px;
+        }
+
+        .experience-description li {
+            margin-bottom: 4px;
+        }
+
+        /* Skills */
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            padding: 8px 0;
+            font-size: 0.9em;
+            color: #444;
+            border-bottom: 1px solid #eee;
+        }
+
+        .skills-list li:last-child {
+            border-bottom: none;
+        }
+
+        .skills-list li::before {
+            content: "▪";
+            color: #2c3e50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-degree {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.95em;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+        }
+
+        .education-school {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 3px;
+        }
+
+        .education-date {
+            font-size: 0.85em;
+            color: #888;
+        }
+
+        /* Contact */
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.9em;
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .contact-item a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+
+        /* Languages / Progress Bars */
+        .language-item {
+            margin-bottom: 15px;
+        }
+
+        .language-name {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #2c3e50;
+            border-radius: 4px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .profile-photo {
+                margin: 0 auto;
+            }
+
+            .about {
+                margin: 0 auto;
+            }
+
+            .name {
+                font-size: 2.2em;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .left-column,
+            .right-column {
+                padding: 30px;
+                border-right: none;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <img src="profile-photo.jpg" alt="Jake Irish De Guzman" class="profile-photo">
+            <div class="header-content">
+                <h1 class="name">JAKE IRISH<br>DE GUZMAN</h1>
+                <p class="about">
+                    Passionate UI/UX designer specializing in creating intuitive and engaging digital experiences. 
+                    Currently pursuing a Bachelor's degree in Information Technology with a focus on user-centered 
+                    design principles and modern design tools.
+                </p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Work Experience -->
+                <section class="section">
+                    <h2 class="section-title">Experience</h2>
+                    
+                    <div class="experience-item">
+                        <div class="experience-title">UI/UX Designer</div>
+                        <div class="experience-date">July 2025 - October 2025</div>
+                        <div class="experience-location">TrikeGO - Capstone Project</div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Designed user interface and user experience for tricycle-hailing mobile application</li>
+                                <li>Created wireframes, user flows, and interactive prototypes</li>
+                                <li>Collaborated with team members to incorporate feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-title">Teacher's Aide</div>
+                        <div class="experience-date">May 2023 - June 2023</div>
+                        <div class="experience-location">City of Malolos Integrated School-CATMON</div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Assisted with classroom management and student supervision</li>
+                                <li>Helped prepare instructional materials and visual aids</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-title">Executive Secretary</div>
+                        <div class="experience-date">October 2023 - April 2024</div>
+                        <div class="experience-location">The SYNTAX Org</div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Organized events including IT Congress for IT students</li>
+                                <li>Coordinated communications and documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Languages / Tools -->
+                <section class="section">
+                    <h2 class="section-title">Design Tools</h2>
+                    
+                    <div class="language-item">
+                        <div class="language-name">Figma</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="language-item">
+                        <div class="language-name">Canva</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="language-item">
+                        <div class="language-name">Adobe Illustrator</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Skills -->
+                <section class="section">
+                    <h2 class="section-title">Skills</h2>
+                    <ul class="skills-list">
+                        <li>Wireframing & Prototyping</li>
+                        <li>User Flow Creation</li>
+                        <li>Usability Testing</li>
+                        <li>User Research</li>
+                        <li>Interface Design</li>
+                        <li>Interactive Prototyping</li>
+                        <li>Time Management</li>
+                        <li>Team Collaboration</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </section>
+
+                <!-- Education -->
+                <section class="section">
+                    <h2 class="section-title">Education</h2>
+                    
+                    <div class="education-item">
+                        <div class="education-degree">Bachelor's Degree in Information Technology</div>
+                        <div class="education-school">STI College Malolos</div>
+                        <div class="education-date">September 2022 - Present</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-degree">Technical-Vocational-Livelihood Track</div>
+                        <div class="education-school">La Consolacion University Philippines</div>
+                        <div class="education-date">August 2020 - May 2022</div>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section class="section">
+                    <h2 class="section-title">Interests</h2>
+                    <ul class="skills-list">
+                        <li>Modern UI/UX Trends</li>
+                        <li>Mobile & Web Applications</li>
+                        <li>Digital Product Design</li>
+                        <li>Emerging Design Tools</li>
+                    </ul>
+                </section>
+
+                <!-- Contact -->
+                <section class="section">
+                    <h2 class="section-title">Contact Me</h2>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="contact-icon">✉</span>
+                            <a href="mailto:jakeirish.deguzman@gmail.com">jakeirish.deguzman@gmail.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            +63 991 412 2078
+                        </li>
+                        <li class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            Peter St. Malolos, Bulacan 3000
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
