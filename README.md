@@ -24,63 +24,6 @@ You'll need to upload **2 files** to GitHub:
 1. `index.html` - Your resume webpage
 2. `profile-photo.jpg` - Your profile picture
 
-## How to Connect to GitHub
-
-### Step 1: Create a GitHub Repository
-
-1. Go to [GitHub](https://github.com) and sign in to your account
-2. Click the "+" icon in the top right corner and select "New repository"
-3. Name your repository: `your-username.github.io` 
-   - Example: If your username is `jakeirish`, name it `jakeirish.github.io`
-   - ⚠️ **Important**: This exact naming format is required for GitHub Pages to work!
-4. Make sure the repository is set to **Public**
-5. Click "Create repository"
-
-### Step 2: Upload Your Files
-
-**Option A: Using GitHub Web Interface (Easiest)**
-
-1. In your new repository, click "uploading an existing file"
-2. Drag and drop **both files**:
-   - `index.html`
-   - `profile-photo.jpg`
-3. Add a commit message like "Add resume and profile photo"
-4. Click "Commit changes"
-
-**Option B: Using Git Command Line**
-
-1. Open your terminal/command prompt
-2. Navigate to the folder containing your resume files
-3. Run these commands:
-
-```bash
-git init
-git add index.html profile-photo.jpg README.md
-git commit -m "Initial commit: Add creative resume"
-git branch -M main
-git remote add origin https://github.com/your-username/your-username.github.io.git
-git push -u origin main
-```
-
-### Step 3: Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click on "Settings" tab
-3. In the left sidebar, click "Pages"
-4. Under "Source", select "Deploy from a branch"
-5. Under "Branch", select "main" and "/root"
-6. Click "Save"
-
-### Step 4: Access Your Resume
-
-After a few minutes (usually 1-5 minutes), your resume will be live at:
-
-```
-https://your-username.github.io
-```
-
-For example: `https://jakeirish.github.io`
-
 ## Customization Tips
 
 ### Changing Colors
